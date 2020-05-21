@@ -1,0 +1,20 @@
+<div *ngIf="character">
+
+  <h2>{{character.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{character.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="character.name" placeholder="name"/>
+    </label>
+    <br>
+    <label>birth:
+      <input [(ngModel)]="character.birth" placeholder="birth"/>
+    </label>
+    <br>
+    <label>job:
+      <input [(ngModel)]="character.job" placeholder="job"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>
